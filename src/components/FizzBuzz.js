@@ -12,6 +12,19 @@ const FizzBuzz = () => {
     const handleDecrease = () => {
         setNumber(number - 1)
     }
+
+    useEffect(() => {
+            if (number % 3 === 0 && number % 5 === 0) {
+                setOutput("fizzbuzz")
+              } else if (number % 3 === 0) {
+                setOutput("fizz")
+              } else if (number % 5 === 0) {
+                setOutput("buzz")
+              } else {
+                setOutput(number);
+              }
+        }
+    )
     
     return(
         <>
